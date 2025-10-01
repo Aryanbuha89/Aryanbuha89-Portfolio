@@ -16,6 +16,7 @@ body{
     height: 100vh;
     background: #000000;
     position: relative;
+    padding-top: 60px;
 }
 .container{
     padding: 10px 10%;
@@ -25,17 +26,43 @@ nav{
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 10px 0;
+    padding: 5px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #000;
+    z-index: 100;
+    padding: 5px 10%;
+    height: 60px;
 }
 
 .logo{
-    width: 140px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.logo .logo-highlight{
+    color: #ff004f;
+}
+
+.logo:hover{
+    color: #ababab;
+    transform: scale(1.05);
+}
+
+.logo:hover .logo-highlight{
+    color: #ff004f;
 }
 
 nav ul li{
     display: inline-block;
     list-style: none;
-    margin: 10px 20px;
+    margin: 5px 20px;
 }
 
 nav ul li a{
@@ -63,19 +90,23 @@ nav ul li a:hover::after{
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    gap: 60px;
-    padding-top: 80px;
-    min-height: calc(100vh - 100px);
+    gap: 50px;
+    min-height: calc(100vh - 60px);
+    padding: 20px 0;
 }
 .header-text{
     flex: 1;
     max-width: 550px;
-    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* vertically center */
+    height: 100%;
 }
 .header-text h1{
     font-size: 60px;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    line-height: 1.2;
 }
 .header-text h1 span{
     color: #ff004f;
@@ -84,7 +115,8 @@ nav ul li a:hover::after{
     font-size: 35px;
     font-weight: 500;
     margin-top: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
+    line-height: 1.4;
     color: #fff;
 }
 .header-text h2 .auto-type{
@@ -110,17 +142,18 @@ nav ul li a:hover::after{
     justify-content: flex-end;
     align-items: center;
     max-width: 500px;
+    height: 100%;
 }
 .quote-box{
     background: linear-gradient(135deg, rgba(255, 0, 79, 0.1), rgba(255, 0, 79, 0.05));
     border: 2px solid #ff004f;
     border-radius: 20px;
-    padding: 40px 35px;
+    padding: 35px 30px;
     position: relative;
     box-shadow: 0 10px 40px rgba(255, 0, 79, 0.3);
     backdrop-filter: blur(10px);
     width: 100%;
-    max-width: 450px;
+    max-width: 420px;
 }
 .quote-box i{
     color: #ff004f;
@@ -130,10 +163,10 @@ nav ul li a:hover::after{
 }
 .quote-box p{
     color: #fff;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.6;
     font-style: italic;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     font-weight: 300;
 }
 .quote-author{
