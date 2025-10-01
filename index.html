@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/2f88feeff1.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</head>
+<body>
+<div id="header">
+  <div class="container">
+    <nav>
+      <img src="images/transperent-Portfolio.png" class="logo">
+      <ul>
+        <li><a href="#header">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="container">
+    <div class="header-content">
+      <div class="header-text">
+        <p>AI Engineer</p>
+        <h1>Hi, I'm <span>Aryan</span></h1>
+        <h2>I <span class="auto-type"></span></h2>
+        <a href="#contact" class="btn btn-connect">Let's Connect</a>
+      </div>
+      <div class="header-quote">
+        <div class="quote-box">
+          <i class="fa-solid fa-quote-left"></i>
+          <p>"Engineering is not only study of 45 subjects but it is moral studies of intellectual life."</p>
+          <span class="quote-author">- Prakhar Srivastav</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- --------about--------> 
+<div id="about">
+  <div class="container">
+    <div class="row">
+      <div class="about-col-1">
+        <img src="images/aryan single photo.png">
+      </div>
+      <div class="about-col-2">
+        <h1 class="sub-title">About Me</h1>
+        <p>I’m Aryan Buha, a Computer Science Engineering student driven by a strong interest in 
+        software development, problem-solving, and technology-driven innovation. My academic 
+        journey and project experience have equipped me with skills in full-stack web 
+        development, app design, and system building, with a focus on creating solutions that are 
+        both efficient and user-friendly. I’m eager to apply my technical knowledge and creativity 
+        to real-world challenges while continuously learning and growing in the field of
+        technology.</p>
+
+        <div class="tab-titles">
+          <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+          <p class="tab-links" onclick="opentab('experience')">Experience</p>
+          <p class="tab-links" onclick="opentab('education')">Education</p>
+        </div>
+        <div class="tab-contents active-tab" id="skills">
+          <ul>
+            <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+            <li><span>Web Development</span><br>Web app Development</li>
+            <li><span>App Development</span><br>Building Android/iOS apps</li>
+          </ul>
+        </div>
+        <div class="tab-contents" id="experience">
+          <ul>
+            <li><span>2025 - Current</span><br>AI engineering at MSU</li>
+            <li><span>2019 - 2025</span><br>Web app Development At MasterCard</li>
+            <li><span>2000 - 2019</span><br>Internship At Surat</li>
+          </ul>
+        </div>
+        <div class="tab-contents" id="education">
+          <ul>
+            <li><span>2025</span><br>2nd year At MSU</li>
+            <li><span>2024</span><br>12th At Ashadeep IIT</li>
+            <li><span>2022</span><br>10th At Akshardham Highschool</li>
+          </ul>
+        </div>
+    </div>
+  </div>
+</div>
+</div> 
+<!-- ---------services---------- -->
+ <div id="services">
+    <div class="container">
+      <h1 class="sub-title">My Services</h1>
+      <div class="services-list">
+        <div onclick="openServiceModal('web')">
+          <i class="fa-solid fa-code"></i>
+          <h2>Web Design</h2>
+          <p>Creating beautiful and responsive websites with modern technologies and best practices.</p>
+          <a href="javascript:void(0)">Learn more</a>
+        </div>
+        <div onclick="openServiceModal('uiux')">
+          <i class="fa-solid fa-gear"></i>
+          <h2>UI/UX Design</h2>
+          <p>Designing intuitive user interfaces and seamless user experiences for digital products.</p>
+          <a href="javascript:void(0)">Learn more</a>
+        </div>
+        <div onclick="openServiceModal('app')">
+          <i class="fa-solid fa-cloud-arrow-up"></i>
+          <h2>App Design</h2>
+          <p>Building cross-platform mobile applications with cutting-edge frameworks and tools.</p>
+          <a href="javascript:void(0)">Learn more</a>
+        </div>
+      </div>
+    </div>
+ </div>
+<!-- ---------portfolio---------- -->
+ <div id="portfolio">
+  <div class="container">
+    <h1 class="sub-title">My Work</h1>
+      <div class="work-list">
+        <div class="work">
+          <img src="images/lj certi.png">
+          <div class="layer">
+            <h3>LJ Hackathon</h3>
+            <p>recently i participated in hackovate lj ,organized by LFA.
+            the experience was so amazing.</p>
+            <a href="https://github.com/Aryanbuha89" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+        <div class="work">
+          <img src="images/dau certi.png">
+          <div class="layer">
+            <h3>DA-IICT Hackathon</h3>
+            <p>recently i participated in hackout-25 ,organized by Synappse.
+            the experience was so good.</p>
+            <a href="https://github.com/Aryanbuha89" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+        <div class="work">
+          <img src="images/nasa certi.png">
+          <div class="layer">
+            <h3>ISRO Hackathon</h3>
+            <p>recently i participated in Online ISRO Hackathon ,organized by isro.
+            the experience was so nice.</p>
+            <a href="https://github.com/Aryanbuha89" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+        <!-- Hidden certificates - will show on 'See more' -->
+        <div class="work hidden-work">
+          <img src="images/lj certi.png">
+          <div class="layer">
+            <h3>Certificate 4</h3>
+            <p>Add your fourth certificate details here.</p>
+            <a href="https://github.com/Aryanbuha89" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+        <div class="work hidden-work">
+          <img src="images/dau certi.png">
+          <div class="layer">
+            <h3>Certificate 5</h3>
+            <p>Add your fifth certificate details here.</p>
+            <a href="https://github.com/Aryanbuha89" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+        <div class="work hidden-work">
+          <img src="images/nasa certi.png">
+          <div class="layer">
+            <h3>Certificate 6</h3>
+            <p>Add your sixth certificate details here.</p>
+            <a href="https://github.com/Aryanbuha89" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+      </div>
+      <a href="javascript:void(0)" class="btn" id="seeMoreBtn" onclick="toggleWork()">See more</a>
+  </div>
+ </div>
+
+ <!-- Service Modal Pop-up -->
+ <div id="serviceModal" class="modal">
+   <div class="modal-content">
+     <span class="close" onclick="closeServiceModal()">&times;</span>
+     <div id="modalBody">
+       <!-- Content will be inserted dynamically -->
+     </div>
+   </div>
+ </div>
+
+ <!-- ---------contact---------- -->
+<div id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="contact-left">
+        <h1 class="sub-title">Contact Me</h1>
+        <p><i class="fa-solid fa-envelope"></i> contact@example.com</p>
+        <p><i class="fa-solid fa-phone"></i> 0123456789</p>
+        <div class="social-icons">
+          <a href="www.linkedin.com/in/aryan-buha-874a5434b"><i class="fa-brands fa-square-linkedin"></i></a>
+          <a href=""><i class="fa-brands fa-square-x-twitter"></i></a>
+          <a href="https://github.com/Aryanbuha89"><i class="fa-brands fa-square-github"></i></a>
+        </div>
+        <a href="images/buhabhai.pdf" download class="btn btn2">Resume</a>
+      </div>
+      <div class="contact-right">
+        <form name="submit-to-google-sheet">
+          <input type="text" name="Name" placeholder="Your Name" required>
+          <input type="email" name="Email" placeholder="Your Email" required>
+          <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+          <button type="submit" class="btn btn2">Submit</button>
+        </form>
+        <span id="msg"></span>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">
+    <p>Copyright © Aryan. Made with <i class="fa-solid fa-heart"></i> by Easy Tutorial</p>
+  </div>
+</div>
+
+
+
+<script>
+
+  // Typed.js animation for header
+  var typed = new Typed(".auto-type", {
+    strings: ["Build AI Solutions", "Create Websites", "Design Applications", "Solve Problems"],
+    typeSpeed: 100,
+    backSpeed: 60,
+    loop: true
+  });
+
+  var tablinks = document.getElementsByClassName("tab-links");
+  var tabcontents = document.getElementsByClassName("tab-contents");
+
+  function opentab(tabname){
+    for(tablink of tablinks){
+      tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents){
+      tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+  }
+
+  // Toggle 'See more' certificates
+  function toggleWork() {
+    const hiddenWorks = document.querySelectorAll('.hidden-work');
+    const btn = document.getElementById('seeMoreBtn');
+    
+    hiddenWorks.forEach(work => {
+      if (work.style.display === 'block') {
+        work.style.display = 'none';
+        btn.textContent = 'See more';
+      } else {
+        work.style.display = 'block';
+        btn.textContent = 'See less';
+      }
+    });
+  }
+
+  // Service Modal Functions
+  const serviceContent = {
+    web: {
+      title: 'Web Design & Development',
+      description: 'I create responsive, modern websites using the latest technologies.',
+      skills: ['HTML5 & CSS3', 'JavaScript & React', 'Responsive Design', 'SEO Optimization', 'Performance Optimization'],
+      projects: ['E-commerce Website', 'Portfolio Sites', 'Business Websites', 'Landing Pages']
+    },
+    uiux: {
+      title: 'UI/UX Design',
+      description: 'I design user-centered interfaces that are both beautiful and functional.',
+      skills: ['Figma & Adobe XD', 'User Research', 'Wireframing', 'Prototyping', 'Design Systems'],
+      projects: ['Mobile App Designs', 'Web App Interfaces', 'Dashboard Design', 'Design Systems']
+    },
+    app: {
+      title: 'App Development',
+      description: 'I build cross-platform mobile applications with seamless performance.',
+      skills: ['React Native', 'Flutter', 'API Integration', 'Firebase', 'App Store Deployment'],
+      projects: ['Social Media Apps', 'E-commerce Apps', 'Productivity Apps', 'Game Apps']
+    }
+  };
+
+  function openServiceModal(service) {
+    const modal = document.getElementById('serviceModal');
+    const modalBody = document.getElementById('modalBody');
+    const content = serviceContent[service];
+    
+    modalBody.innerHTML = `
+      <h2>${content.title}</h2>
+      <p class="modal-desc">${content.description}</p>
+      <div class="modal-section">
+        <h3>Skills & Technologies:</h3>
+        <ul class="modal-list">
+          ${content.skills.map(skill => `<li>${skill}</li>`).join('')}
+        </ul>
+      </div>
+      <div class="modal-section">
+        <h3>Project Types:</h3>
+        <ul class="modal-list">
+          ${content.projects.map(project => `<li>${project}</li>`).join('')}
+        </ul>
+      </div>
+      <a href="#contact" class="btn btn2" onclick="closeServiceModal()">Get In Touch</a>
+    `;
+    
+    modal.style.display = 'block';
+  }
+
+  function closeServiceModal() {
+    document.getElementById('serviceModal').style.display = 'none';
+  }
+
+  // Close modal when clicking outside
+  window.onclick = function(event) {
+    const modal = document.getElementById('serviceModal');
+    if (event.target == modal) {
+      modal.style.display = 'none';
+    }
+  }
+
+  // Initialize EmailJS
+  (function() {
+    emailjs.init({
+      publicKey: "dc2UOFd7SrfFFz4ok", // Replace with your EmailJS public key
+    });
+  })();
+
+  // Form submission
+  const form = document.forms['submit-to-google-sheet'];
+  const msg = document.getElementById('msg');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Show loading message
+    msg.innerHTML = "Sending...";
+    msg.style.color = "#ababab";
+    
+    // Get form values
+    const templateParams = {
+      from_name: form.Name.value,
+      from_email: form.Email.value,
+      message: form.Message.value
+    };
+
+    // Send email using EmailJS with built-in bot protection
+    emailjs.send(
+      'service_txnmfop',  // Replace with your EmailJS service ID
+      'template_izdk4kt', // Replace with your EmailJS template ID
+      templateParams
+    )
+    .then(function(response) {
+      msg.innerHTML = "Message sent successfully!";
+      msg.style.color = "#61ff61";
+      setTimeout(function() {
+        msg.innerHTML = "";
+      }, 5000);
+      form.reset();
+    }, function(error) {
+      msg.innerHTML = "Failed to send message. Please try again.";
+      msg.style.color = "#ff004f";
+      setTimeout(function() {
+        msg.innerHTML = "";
+      }, 5000);
+    });
+  });
+
+</script>
+</body>
+</html>
