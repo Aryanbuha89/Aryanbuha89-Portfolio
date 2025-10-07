@@ -118,53 +118,70 @@
   <div class="container">
     <h1 class="sub-title">Achievement</h1>
       <div class="work-list">
-        <div class="work">
-          <img src="images/lj certi.png">
-          <div class="layer">
-            <h3>Finalist – Hackovate 2025, LJ University 🏆</h3>
-            <p>Secured a spot in the Top 40 out of 240+ teams with our project Smart Cattle Health & Milk Prediction System. Built an AI-powered platform for predictive dairy farming, featuring real-time health monitoring, milk yield prediction, and disease detection.The team delivered a practical AI solution, showcasing creativity, collaboration, and measurable impact in modern dairy farming.</p>
-            <a href="https://github.com/Aryanbuha89" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        <div class="work" onclick="openCertificateModal('lj')">
+          <div class="work-image">
+            <img src="images/lj certi.png" alt="LJ University Certificate">
+          </div>
+          <div class="work-content">
+            <h3>🏆 Finalist – Hackovate 2025, LJ University</h3>
+            <p>Secured a spot in the Top 40 out of 240+ teams with our project Smart Cattle Health & Milk Prediction System. Built an AI-powered platform for predictive dairy farming, featuring real-time health monitoring, milk yield prediction, and disease detection.</p>
+            <a href="javascript:void(0)" class="btn-view">View Certificate</a>
           </div>
         </div>
-        <div class="work">
-          <img src="images/dau certi.png">
-          <div class="layer">
-            <h3>HackOut 2025 – DAIICT</h3>
-            <p>Built the Coastal Threat Alert System, leveraging AI, IoT, and satellite data to deliver real-time disaster alerts and actionable insights for protecting coastal communities and ecosystems. A hands-on experience in innovative problem-solving, collaborative development, and climate-tech solutions.</p>
-            <a href="https://github.com/Aryanbuha89" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        
+        <div class="work" onclick="openCertificateModal('dau')">
+          <div class="work-image">
+            <img src="images/dau certi.png" alt="DAIICT Certificate">
+          </div>
+          <div class="work-content">
+            <h3>💻 HackOut 2025 – DAIICT</h3>
+            <p>Built the Coastal Threat Alert System, leveraging AI, IoT, and satellite data to deliver real-time disaster alerts and actionable insights for protecting coastal communities and ecosystems.</p>
+            <a href="javascript:void(0)" class="btn-view">View Certificate</a>
           </div>
         </div>
-        <div class="work">
-          <img src="images/nasa certi.png">
-          <div class="layer">
-            <h3>🚀Certificate of Acknowledgement – Bharatiya Antariksh Hackathon 2025</h3>
-            <p>Recognized for submitting an innovative idea to the Bharatiya Antariksh Hackathon 2025, organized by Hack2skill in collaboration with ISRO.This achievement reflects my dedication to innovation 🚀, exploration 🌌, and continuous learning 💻 in the field of space and technology, contributing to India’s vision in space research.</p>
-            <a href="https://github.com/Aryanbuha89" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        
+        <div class="work" onclick="openCertificateModal('nasa')">
+          <div class="work-image">
+            <img src="images/nasa certi.png" alt="NASA Certificate">
+          </div>
+          <div class="work-content">
+            <h3>🚀 Bharatiya Antariksh Hackathon 2025</h3>
+            <p>Recognized for submitting an innovative idea to the Bharatiya Antariksh Hackathon 2025, organized by Hack2skill in collaboration with ISRO. Reflects dedication to innovation and space technology.</p>
+            <a href="javascript:void(0)" class="btn-view">View Certificate</a>
           </div>
         </div>
+        
         <!-- Hidden certificates - will show on 'See more' -->
-        <div class="work hidden-work">
-          <img src="images/lj certi.png">
-          <div class="layer">
-            <h3>Certificate 4</h3>
-            <p>Add your fourth certificate details here.</p>
-            <a href="https://github.com/Aryanbuha89" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        <div class="work hidden-work" onclick="openCertificateModal('cert4')">
+          <div class="work-image">
+            <img src="images/lj certi.png" alt="Certificate 4">
+          </div>
+          <div class="work-content">
+            <h3>📜 Additional Certificate 4</h3>
+            <p>Add your fourth certificate details here. This is a placeholder for future achievements and certifications.</p>
+            <a href="javascript:void(0)" class="btn-view">View Certificate</a>
           </div>
         </div>
-        <div class="work hidden-work">
-          <img src="images/dau certi.png">
-          <div class="layer">
-            <h3>Certificate 5</h3>
-            <p>Add your fifth certificate details here.</p>
-            <a href="https://github.com/Aryanbuha89" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        
+        <div class="work hidden-work" onclick="openCertificateModal('cert5')">
+          <div class="work-image">
+            <img src="images/dau certi.png" alt="Certificate 5">
+          </div>
+          <div class="work-content">
+            <h3>🎯 Additional Certificate 5</h3>
+            <p>Add your fifth certificate details here. This is a placeholder for future achievements and certifications.</p>
+            <a href="javascript:void(0)" class="btn-view">View Certificate</a>
           </div>
         </div>
-        <div class="work hidden-work">
-          <img src="images/nasa certi.png">
-          <div class="layer">
-            <h3>Certificate 6</h3>
-            <p>Add your sixth certificate details here.</p>
-            <a href="https://github.com/Aryanbuha89" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        
+        <div class="work hidden-work" onclick="openCertificateModal('cert6')">
+          <div class="work-image">
+            <img src="images/nasa certi.png" alt="Certificate 6">
+          </div>
+          <div class="work-content">
+            <h3>⭐ Additional Certificate 6</h3>
+            <p>Add your sixth certificate details here. This is a placeholder for future achievements and certifications.</p>
+            <a href="javascript:void(0)" class="btn-view">View Certificate</a>
           </div>
         </div>
       </div>
@@ -178,6 +195,16 @@
      <span class="close" onclick="closeServiceModal()">&times;</span>
      <div id="modalBody">
        <!-- Content will be inserted dynamically -->
+     </div>
+   </div>
+ </div>
+
+ <!-- Certificate Modal Pop-up -->
+ <div id="certificateModal" class="modal">
+   <div class="modal-content certificate-modal">
+     <span class="close" onclick="closeCertificateModal()">&times;</span>
+     <div id="certificateModalBody">
+       <!-- Certificate content will be inserted dynamically -->
      </div>
    </div>
  </div>
@@ -310,20 +337,113 @@
 
   // Close modal when clicking outside
   window.onclick = function(event) {
-    const modal = document.getElementById('serviceModal');
-    if (event.target == modal) {
-      modal.style.display = 'none';
+    const serviceModal = document.getElementById('serviceModal');
+    const certificateModal = document.getElementById('certificateModal');
+    if (event.target == serviceModal) {
+      serviceModal.style.display = 'none';
+    }
+    if (event.target == certificateModal) {
+      certificateModal.style.display = 'none';
     }
   }
 
-  // Initialize EmailJS
-  (function() {
-    emailjs.init({
-      publicKey: "dc2UOFd7SrfFFz4ok", // Replace with your EmailJS public key
-    });
-  })();
+  // Certificate Modal Functions
+  const certificateData = {
+    lj: {
+      title: 'Finalist – Hackovate 2025, LJ University',
+      organization: 'LJ University',
+      date: 'January 2025',
+      image: 'images/lj certi.png',
+      description: 'Secured a spot in the Top 40 out of 240+ teams with our project Smart Cattle Health & Milk Prediction System. Built an AI-powered platform for predictive dairy farming, featuring real-time health monitoring, milk yield prediction, and disease detection. The team delivered a practical AI solution, showcasing creativity, collaboration, and measurable impact in modern dairy farming.',
+      skills: ['Machine Learning', 'AI Development', 'Data Analysis', 'Team Collaboration', 'Problem Solving'],
+      achievement: 'Top 40 out of 240+ teams'
+    },
+    dau: {
+      title: 'HackOut 2025 – DAIICT',
+      organization: 'Dhirubhai Ambani Institute of Information and Communication Technology',
+      date: 'February 2025',
+      image: 'images/dau certi.png',
+      description: 'Built the Coastal Threat Alert System, leveraging AI, IoT, and satellite data to deliver real-time disaster alerts and actionable insights for protecting coastal communities and ecosystems. A hands-on experience in innovative problem-solving, collaborative development, and climate-tech solutions.',
+      skills: ['IoT Development', 'Satellite Data Analysis', 'Real-time Systems', 'Climate Technology', 'Disaster Management'],
+      achievement: 'Successfully developed climate-tech solution'
+    },
+    nasa: {
+      title: 'Bharatiya Antariksh Hackathon 2025',
+      organization: 'ISRO & Hack2skill',
+      date: 'March 2025',
+      image: 'images/nasa certi.png',
+      description: 'Recognized for submitting an innovative idea to the Bharatiya Antariksh Hackathon 2025, organized by Hack2skill in collaboration with ISRO. This achievement reflects dedication to innovation, exploration, and continuous learning in the field of space and technology, contributing to India\'s vision in space research.',
+      skills: ['Space Technology', 'Innovation', 'Research & Development', 'Space Applications', 'Technical Writing'],
+      achievement: 'Certificate of Acknowledgement from ISRO'
+    },
+    cert4: {
+      title: 'Additional Certificate 4',
+      organization: 'Future Organization',
+      date: 'TBD',
+      image: 'images/lj certi.png',
+      description: 'This is a placeholder for future achievements and certifications. Add your details here when you receive new certificates.',
+      skills: ['Skill 1', 'Skill 2', 'Skill 3'],
+      achievement: 'Future Achievement'
+    },
+    cert5: {
+      title: 'Additional Certificate 5',
+      organization: 'Future Organization',
+      date: 'TBD',
+      image: 'images/dau certi.png',
+      description: 'This is a placeholder for future achievements and certifications. Add your details here when you receive new certificates.',
+      skills: ['Skill 1', 'Skill 2', 'Skill 3'],
+      achievement: 'Future Achievement'
+    },
+    cert6: {
+      title: 'Additional Certificate 6',
+      organization: 'Future Organization',
+      date: 'TBD',
+      image: 'images/nasa certi.png',
+      description: 'This is a placeholder for future achievements and certifications. Add your details here when you receive new certificates.',
+      skills: ['Skill 1', 'Skill 2', 'Skill 3'],
+      achievement: 'Future Achievement'
+    }
+  };
 
-  // Form submission
+  function openCertificateModal(certId) {
+    const modal = document.getElementById('certificateModal');
+    const modalBody = document.getElementById('certificateModalBody');
+    const cert = certificateData[certId];
+    
+    modalBody.innerHTML = `
+      <div class="certificate-content">
+        <img src="${cert.image}" alt="${cert.title}" class="certificate-image">
+        <div class="certificate-details">
+          <h2>${cert.title}</h2>
+          <div class="organization">${cert.organization}</div>
+          <div class="date">${cert.date}</div>
+          <p>${cert.description}</p>
+          <div class="modal-section">
+            <h3>Skills Demonstrated:</h3>
+            <ul class="modal-list">
+              ${cert.skills.map(skill => `<li>${skill}</li>`).join('')}
+            </ul>
+          </div>
+          <div class="modal-section">
+            <h3>Key Achievement:</h3>
+            <p style="color: #61ff61; font-weight: 600;">${cert.achievement}</p>
+          </div>
+          <div class="certificate-actions">
+            <a href="${cert.image}" download class="btn btn2">Download Certificate</a>
+            <a href="https://github.com/Aryanbuha89" target="_blank" class="btn">View Project</a>
+          </div>
+        </div>
+      </div>
+    `;
+    
+    modal.style.display = 'block';
+  }
+
+  function closeCertificateModal() {
+    document.getElementById('certificateModal').style.display = 'none';
+  }
+
+  // Contact form submission
   const form = document.forms['submit-to-google-sheet'];
   const msg = document.getElementById('msg');
 
@@ -333,35 +453,72 @@
     // Show loading message
     msg.innerHTML = "Sending...";
     msg.style.color = "#ababab";
+    msg.style.display = "block";
     
     // Get form values
-    const templateParams = {
-      from_name: form.Name.value,
-      from_email: form.Email.value,
-      message: form.Message.value
-    };
-
-    // Send email using EmailJS with built-in bot protection
-    emailjs.send(
-      'service_txnmfop',  // Replace with your EmailJS service ID
-      'template_izdk4kt', // Replace with your EmailJS template ID
-      templateParams
-    )
-    .then(function(response) {
-      msg.innerHTML = "Message sent successfully!";
-      msg.style.color = "#61ff61";
-      setTimeout(function() {
-        msg.innerHTML = "";
-      }, 5000);
-      form.reset();
-    }, function(error) {
-      msg.innerHTML = "Failed to send message. Please try again.";
+    const formData = new FormData(form);
+    const name = formData.get('Name');
+    const email = formData.get('Email');
+    const message = formData.get('Message');
+    
+    // Validate form data
+    if (!name || !email || !message) {
+      msg.innerHTML = "❌ Please fill in all fields.";
       msg.style.color = "#ff004f";
       setTimeout(function() {
         msg.innerHTML = "";
-      }, 5000);
+      }, 3000);
+      return;
+    }
+    
+    // Send email using EmailJS
+    const templateParams = {
+      from_name: name,
+      from_email: email,
+      message: message,
+      to_email: 'aryanbuha56@gmail.com'
+    };
+
+    emailjs.send(
+      'service_txnmfop',  // Your EmailJS service ID
+      'template_izdk4kt', // Your EmailJS template ID
+      templateParams
+    )
+    .then(function(response) {
+      console.log('EmailJS SUCCESS!', response.status, response.text);
+      // Show success message
+      msg.innerHTML = `✅ Thank you ${name}! Your message has been sent successfully. I'll get back to you at ${email} soon.`;
+      msg.style.color = "#61ff61";
+      
+      // Reset form
+      form.reset();
+      
+      // Hide message after 6 seconds
+      setTimeout(function() {
+        msg.innerHTML = "";
+        msg.style.display = "none";
+      }, 6000);
+      
+    }, function(error) {
+      console.log('EmailJS FAILED...', error);
+      // Show error message
+      msg.innerHTML = "❌ Failed to send message. Please try again or contact me directly at aryanbuha56@gmail.com";
+      msg.style.color = "#ff004f";
+      
+      // Hide message after 8 seconds
+      setTimeout(function() {
+        msg.innerHTML = "";
+        msg.style.display = "none";
+      }, 8000);
     });
   });
+
+  // Initialize EmailJS
+  (function() {
+    emailjs.init({
+      publicKey: "dc2UOFd7SrfFFz4ok", // Your EmailJS public key
+    });
+  })();
 
 </script>
 </body>
