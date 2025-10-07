@@ -120,7 +120,7 @@
       <div class="achievement-grid">
         <div class="achievement-card" onclick="window.open('lj-certificate.html', '_blank')">
           <div class="achievement-image">
-            <img src="images/lj certi.png" alt="LJ University Certificate">
+            <img src="images/LJ Certificate.jpg" alt="LJ University Certificate">
             <div class="achievement-overlay">
               <i class="fa-solid fa-external-link"></i>
             </div>
@@ -133,9 +133,9 @@
           </div>
         </div>
         
-        <div class="achievement-card" onclick="window.open('dau-certificate.html', '_blank')">
+        <div class="achievement-card" onclick="window.open('daiict-certificate.html', '_blank')">
           <div class="achievement-image">
-            <img src="images/dau certi.png" alt="DAIICT Certificate">
+            <img src="images/DA-IICT Certificate.jpg" alt="DAIICT Certificate">
             <div class="achievement-overlay">
               <i class="fa-solid fa-external-link"></i>
             </div>
@@ -150,66 +150,49 @@
         
         <div class="achievement-card" onclick="window.open('nasa-certificate.html', '_blank')">
           <div class="achievement-image">
-            <img src="images/nasa certi.png" alt="NASA Certificate">
+            <img src="images/NASA Certificate.jpg" alt="NASA Certificate">
             <div class="achievement-overlay">
               <i class="fa-solid fa-external-link"></i>
             </div>
           </div>
           <div class="achievement-content">
-            <h3>🚀 Bharatiya Antariksh Hackathon</h3>
-            <p class="achievement-org">ISRO & Hack2skill</p>
-            <p class="achievement-desc">Innovative space technology solution submission</p>
+            <h3>🚀 NASA Space Apps Challenge</h3>
+            <p class="achievement-org">NASA & Hack2skill</p>
+            <p class="achievement-desc">Global hackathon focused on space exploration and Earth science</p>
             <span class="achievement-badge">Space Tech</span>
           </div>
         </div>
         
-        <!-- Hidden achievements - will show on 'See more' -->
-        <div class="achievement-card hidden-achievement" onclick="window.open('cert4.html', '_blank')">
+        <div class="achievement-card" onclick="window.open('isro-certificate.html', '_blank')">
           <div class="achievement-image">
-            <img src="images/lj certi.png" alt="Certificate 4">
+            <img src="images/ISRO Certificate.png" alt="ISRO Certificate">
             <div class="achievement-overlay">
               <i class="fa-solid fa-external-link"></i>
             </div>
           </div>
           <div class="achievement-content">
-            <h3>📜 Future Achievement 4</h3>
-            <p class="achievement-org">Future Organization</p>
-            <p class="achievement-desc">Placeholder for upcoming achievements</p>
-            <span class="achievement-badge">Coming Soon</span>
+            <h3>🛰️ Bharatiya Antariksh Hackathon</h3>
+            <p class="achievement-org">ISRO</p>
+            <p class="achievement-desc">National space technology hackathon by Indian Space Research Organisation</p>
+            <span class="achievement-badge">Space Innovation</span>
           </div>
         </div>
         
-        <div class="achievement-card hidden-achievement" onclick="window.open('cert5.html', '_blank')">
+        <div class="achievement-card" onclick="window.open('itm-certificate.html', '_blank')">
           <div class="achievement-image">
-            <img src="images/dau certi.png" alt="Certificate 5">
+            <img src="images/ITM-Gamejam Certificate.jpg" alt="ITM Game Jam Certificate">
             <div class="achievement-overlay">
               <i class="fa-solid fa-external-link"></i>
             </div>
           </div>
           <div class="achievement-content">
-            <h3>🎯 Future Achievement 5</h3>
-            <p class="achievement-org">Future Organization</p>
-            <p class="achievement-desc">Placeholder for upcoming achievements</p>
-            <span class="achievement-badge">Coming Soon</span>
-          </div>
-        </div>
-        
-        <div class="achievement-card hidden-achievement" onclick="window.open('cert6.html', '_blank')">
-          <div class="achievement-image">
-            <img src="images/nasa certi.png" alt="Certificate 6">
-            <div class="achievement-overlay">
-              <i class="fa-solid fa-external-link"></i>
-            </div>
-          </div>
-          <div class="achievement-content">
-            <h3>⭐ Future Achievement 6</h3>
-            <p class="achievement-org">Future Organization</p>
-            <p class="achievement-desc">Placeholder for upcoming achievements</p>
-            <span class="achievement-badge">Coming Soon</span>
+            <h3>🎮 ITM Game Jam</h3>
+            <p class="achievement-org">ITM University</p>
+            <p class="achievement-desc">Game development competition showcasing creativity and technical skills</p>
+            <span class="achievement-badge">Game Dev</span>
           </div>
         </div>
       </div>
-      <a href="javascript:void(0)" class="btn" id="seeMoreBtn" onclick="toggleAchievements()">See more</a>
   </div>
  </div>
 
@@ -281,21 +264,6 @@
     document.getElementById(tabname).classList.add("active-tab");
   }
 
-  // Toggle 'See more' achievements
-  function toggleAchievements() {
-    const hiddenAchievements = document.querySelectorAll('.hidden-achievement');
-    const btn = document.getElementById('seeMoreBtn');
-    
-    hiddenAchievements.forEach(achievement => {
-      if (achievement.style.display === 'block') {
-        achievement.style.display = 'none';
-        btn.textContent = 'See more';
-      } else {
-        achievement.style.display = 'block';
-        btn.textContent = 'See less';
-      }
-    });
-  }
 
   // Service Modal Functions
  const serviceContent = { 
