@@ -86,27 +86,33 @@
 <!-- ---------services---------- -->
 <div id="services">
   <div class="container">
-    <h1 class="sub-title">My Services</h1>
+    <h1 class="sub-title">Technical Expertise</h1>
     <div class="services-list">
       
-      <div onclick="openServiceModal('designing')">
-        <i class="fa-solid fa-paintbrush"></i>
-        <h2>Designing</h2>
-        <p>Creating clean and user-friendly designs with a focus on simplicity, usability, and visual appeal. Experienced in crafting layouts and UI concepts for academic and personal projects.</p>
+      <div onclick="openServiceModal('software')">
+        <i class="fa-solid fa-code"></i>
+        <h2>Software Development</h2>
+        <div class="service-quote">
+          <p>💡 Focused on building a strong foundation for advanced development and problem-solving.</p>
+        </div>
         <a href="javascript:void(0)">Learn more</a>
       </div>
       
-      <div onclick="openServiceModal('ml')">
-        <i class="fa-solid fa-brain"></i>
-        <h2>Model Training</h2>
-        <p>Exploring machine learning fundamentals by building and training basic models. Skilled in understanding datasets, preprocessing, and applying algorithms for learning purposes.</p>
+      <div onclick="openServiceModal('ai')">
+        <i class="fa-solid fa-robot"></i>
+        <h2>AI & Machine Learning</h2>
+        <div class="service-quote">
+          <p>💡 Currently focusing on building deeper understanding of model pipelines — from raw data to trained AI systems.</p>
+        </div>
         <a href="javascript:void(0)">Learn more</a>
       </div>
       
-      <div onclick="openServiceModal('web')">
-        <i class="fa-solid fa-laptop-code"></i>
-        <h2>Web Development</h2>
-        <p>Developing simple, responsive websites using HTML and CSS. Passionate about creating structured, efficient, and visually appealing web pages with a beginner-to-intermediate approach.</p>
+      <div onclick="openServiceModal('fullstack')">
+        <i class="fa-solid fa-layer-group"></i>
+        <h2>Full-Stack Development</h2>
+        <div class="service-quote">
+          <p>💡 Passionate about creating seamless, full-stack web experiences that solve meaningful problems.</p>
+        </div>
         <a href="javascript:void(0)">Learn more</a>
       </div>
       
@@ -163,7 +169,7 @@
           </div>
         </div>
         
-        <div class="achievement-card" onclick="window.open('isro-certificate.html', '_blank')">
+        <div class="achievement-card hidden-achievement" onclick="window.open('isro-certificate.html', '_blank')">
           <div class="achievement-image">
             <img src="images/ISRO Certificate.png" alt="ISRO Certificate">
             <div class="achievement-overlay">
@@ -178,7 +184,7 @@
           </div>
         </div>
         
-        <div class="achievement-card" onclick="window.open('itm-certificate.html', '_blank')">
+        <div class="achievement-card hidden-achievement" onclick="window.open('itm-certificate.html', '_blank')">
           <div class="achievement-image">
             <img src="images/ITM-Gamejam Certificate.jpg" alt="ITM Game Jam Certificate">
             <div class="achievement-overlay">
@@ -192,6 +198,13 @@
             <span class="achievement-badge">Game Dev</span>
           </div>
         </div>
+      </div>
+      
+      <div class="view-more-container">
+        <button id="viewMoreBtn" class="btn view-more-btn" onclick="toggleAchievements()">
+          <i class="fa-solid fa-chevron-down"></i>
+          View More Achievements
+        </button>
       </div>
   </div>
  </div>
@@ -267,23 +280,23 @@
 
   // Service Modal Functions
  const serviceContent = { 
-  designing: {
-    title: 'Designing',
-    description: 'Creating clean and user-friendly designs with attention to usability and visual appeal for academic and personal projects.',
-    skills: ['UI Layouts', 'Wireframing', 'Basic Adobe/Figma', 'Color Theory', 'Typography'],
-    projects: ['Portfolio Layouts', 'Web Page Designs', 'Project Wireframes', 'UI Concepts']
+  software: {
+    title: 'Software Development (Core Programming)',
+    description: 'Building strong fundamentals in software design and development using C++, Java, and Python. Skilled in writing clean, efficient, and well-structured code while applying data structures, algorithms, and object-oriented programming principles.',
+    skills: ['C++, Java, Python', 'Data Structures & Algorithms', 'Object-Oriented Programming (OOP)', 'Git & Version Control', 'Debugging and Code Optimization'],
+    projects: ['Console-based utilities', 'Algorithmic problem-solving', 'Mini academic applications', 'Competitive programming exercises'],
   },
-  ml: {
-    title: 'Model Training',
-    description: 'Hands-on experience in building and training basic machine learning models, including dataset handling and algorithm application.',
-    skills: ['Data Preprocessing', 'Linear Regression', 'Classification Models', 'Python Basics', 'Scikit-learn'],
-    projects: ['Milk Yield Prediction', 'Disease Detection Models', 'Simple AI Experiments', 'Dataset Analysis Projects']
+  ai: {
+    title: 'AI & Machine Learning (Foundational Expertise)',
+    description: 'Building a strong foundation in artificial intelligence and machine learning by understanding how models learn, improve, and adapt. Skilled in base model training, dataset preparation, fine-tuning, and data preprocessing to develop intelligent, data-driven solutions.',
+    skills: ['Python (Pandas, NumPy, Scikit-learn)', 'Base Model Training & Evaluation', 'Dataset Collection & Management', 'Fine-Tuning Pretrained Models', 'Data Cleaning & Preprocessing', 'Predictive Analytics & Insights'],
+    projects: ['Smart Cattle Health & Milk Prediction System', 'Disease Detection Models', 'Data-driven Climate Analysis', 'Small-scale ML Experimentation Projects']
   },
-  web: {
-    title: 'Web Development',
-    description: 'Developing simple, responsive websites using HTML and CSS, focusing on clean structure, efficiency, and beginner-to-intermediate projects.',
-    skills: ['HTML5 & CSS3', 'Responsive Layouts', 'Basic JavaScript', 'UI Implementation', 'Portfolio Websites'],
-    projects: ['Portfolio Website', 'Landing Pages', 'Small Business Websites', 'Academic Projects']
+  fullstack: {
+    title: 'Full-Stack Web Development (Hands-on Practice)',
+    description: 'Designing and developing dynamic web applications with a focus on modern front-end interfaces and backend systems. Building projects that connect React-based UIs with Node.js / Flask APIs and real-time databases.',
+    skills: ['Frontend: HTML5, CSS3, JavaScript, React.js', 'Backend: Node.js, Express.js, Python Flask', 'Database: MongoDB, SQLite', 'Cloud & APIs: RESTful APIs, Deployment', 'Responsive & Interactive Design'],
+    projects: ['Coastal Threat Alert System (Hackathon Project)', 'Portfolio Website', 'Real-Time Dashboards', 'RESTful Web Apps']
   }
 };
 
@@ -303,7 +316,7 @@
         </ul>
       </div>
       <div class="modal-section">
-        <h3>Project Types:</h3>
+        <h3>Projects & Practice:</h3>
         <ul class="modal-list">
           ${content.projects.map(project => `<li>${project}</li>`).join('')}
         </ul>
@@ -403,6 +416,47 @@
       publicKey: "dc2UOFd7SrfFFz4ok", // Your EmailJS public key
     });
   })();
+
+  // Achievement View More Functionality
+  function toggleAchievements() {
+    const hiddenAchievements = document.querySelectorAll('.hidden-achievement');
+    const viewMoreBtn = document.getElementById('viewMoreBtn');
+    const btnIcon = viewMoreBtn.querySelector('i');
+    const btnText = viewMoreBtn.childNodes[2]; // Text node after the icon
+    
+    if (hiddenAchievements[0].style.display === 'none' || hiddenAchievements[0].style.display === '') {
+      // Show hidden achievements
+      hiddenAchievements.forEach((achievement, index) => {
+        setTimeout(() => {
+          achievement.style.display = 'block';
+          achievement.classList.add('fade-in');
+        }, index * 150); // Stagger the animation
+      });
+      
+      // Update button
+      btnIcon.className = 'fa-solid fa-chevron-up';
+      viewMoreBtn.classList.add('expanded');
+      btnText.textContent = ' View Less Achievements';
+      
+    } else {
+      // Hide achievements
+      hiddenAchievements.forEach(achievement => {
+        achievement.style.display = 'none';
+        achievement.classList.remove('fade-in');
+      });
+      
+      // Update button
+      btnIcon.className = 'fa-solid fa-chevron-down';
+      viewMoreBtn.classList.remove('expanded');
+      btnText.textContent = ' View More Achievements';
+      
+      // Scroll back to achievements section
+      document.getElementById('portfolio').scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  }
 
 </script>
 </body>

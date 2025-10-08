@@ -285,6 +285,20 @@ nav ul li a:hover::after{
     background: #ff004f;
     transform: translateY(-10px);
 }
+
+.service-quote {
+    padding: 15px 0;
+    margin: 20px 0;
+}
+
+.service-quote p {
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0;
+    font-style: italic;
+    font-weight: 500;
+}
 /* ---------portfolio---------- */
 #portfolio{
     padding: 50px 0;
@@ -668,6 +682,22 @@ form .btn2:hover{
     display: inline-block;
 }
 
+.modal-quote {
+    background: #262626;
+    border-left: 4px solid #ff004f;
+    padding: 20px;
+    margin: 25px 0;
+    border-radius: 8px;
+}
+
+.modal-quote p {
+    color: #61ff61;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    font-style: italic;
+}
+
 /* Certificate Modal Styles */
 .certificate-modal {
     max-width: 90%;
@@ -805,5 +835,65 @@ form .btn2:hover{
     }
     .work-content h3{
         font-size: 20px;
+    }
+}
+
+/* Achievement View More Functionality */
+.hidden-achievement {
+    display: none;
+}
+
+.view-more-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.view-more-btn {
+    background: linear-gradient(45deg, #ff004f, #ff6b6b);
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 5px 15px rgba(255, 0, 79, 0.3);
+}
+
+.view-more-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 0, 79, 0.4);
+    background: linear-gradient(45deg, #ff0040, #ff5555);
+}
+
+.view-more-btn i {
+    transition: transform 0.3s ease;
+}
+
+.view-more-btn.expanded i {
+    transform: rotate(180deg);
+}
+
+/* Animation for showing/hiding achievements */
+.achievement-card {
+    transition: all 0.5s ease;
+}
+
+.achievement-card.fade-in {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

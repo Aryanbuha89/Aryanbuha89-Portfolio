@@ -56,10 +56,14 @@
     }
     .certificate-image-section img {
       width: 100%;
-      max-width: 500px;
+      max-width: 600px;
+      height: auto;
+      object-fit: contain;
       border-radius: 15px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
       transition: transform 0.3s;
+      display: block;
+      margin: 0 auto;
     }
     .certificate-image-section img:hover {
       transform: scale(1.05);
@@ -164,6 +168,24 @@
       .project-links {
         flex-direction: column;
       }
+      .certificate-image-section img {
+        max-width: 100%;
+        margin: 0 auto 20px;
+      }
+      .certificate-container {
+        padding: 0 15px;
+      }
+    }
+    @media only screen and (max-width: 480px) {
+      .certificate-page {
+        padding: 60px 0 30px;
+      }
+      .certificate-header h1 {
+        font-size: 24px;
+      }
+      .certificate-header .org {
+        font-size: 16px;
+      }
     }
   </style>
 </head>
@@ -197,26 +219,43 @@
           </div>
           
           <div class="detail-section">
-            <h3>Project Description</h3>
-            <p>Participated in the <strong>ITM Game Jam</strong>, a competitive game development event showcasing creativity, technical skills, and innovative game design concepts.</p>
-            <p>Developed a complete game prototype within the given time constraints, demonstrating proficiency in game development frameworks, creative problem-solving, and rapid prototyping. This experience provided valuable insights into game design principles, user experience, and collaborative development in a high-pressure environment.</p>
+            <h3>Project: Scream-to-Survive – A Voice-Controlled Flying Game</h3>
+            <p>Participated in <strong>ITM Game Jam 2024</strong>, where our team built a <strong>Mario-inspired flying game from scratch</strong> — entirely controlled by the player's <strong>voice input</strong>.</p>
+            <p>In this innovative gameplay concept, the <strong>player character continuously flies forward</strong>, while <strong>obstacles move in the opposite direction</strong>. The <strong>player's voice intensity controls the altitude</strong>:</p>
+            <p>• 🔊 <strong>Louder voice → character flies higher</strong><br>
+            • 🤫 <strong>Silence → character descends</strong></p>
+            <p>The objective is to <strong>navigate through dynamically generated obstacles</strong> using only your voice — combining <strong>fun, challenge, and innovation</strong> into one unique experience.</p>
           </div>
           
           <div class="detail-section">
-            <h3>Technologies Used</h3>
+            <h3>Project Highlights</h3>
+            <p>• Designed and developed a <strong>fully functional game from scratch</strong> within limited time<br>
+            • Integrated <strong>real-time voice input</strong> for gameplay control using audio amplitude detection<br>
+            • Built <strong>custom physics mechanics</strong> for smooth flight control and obstacle interaction<br>
+            • Focused on <strong>clean 2D design</strong>, <strong>responsive gameplay</strong>, and <strong>balanced difficulty</strong><br>
+            • Delivered a creative twist on classic Mario-style side scrollers</p>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Tech Stack</h3>
             <div class="skills-list">
               <span class="skill-tag">Game Engine: Unity</span>
               <span class="skill-tag">Programming: C#</span>
+              <span class="skill-tag">Voice Detection: Audio Amplitude</span>
               <span class="skill-tag">Graphics: 2D Sprites</span>
-              <span class="skill-tag">Audio: Sound Design</span>
-              <span class="skill-tag">Game Design</span>
-              <span class="skill-tag">Rapid Prototyping</span>
+              <span class="skill-tag">Physics: Custom Game Mechanics</span>
+              <span class="skill-tag">Design: Dynamic Obstacles</span>
             </div>
           </div>
           
+          <div class="detail-section">
+            <h3>Key Learning</h3>
+            <p>Gained practical experience in <strong>audio-driven gameplay</strong>, <strong>game physics</strong>, and <strong>rapid prototyping</strong>, while enhancing <strong>team collaboration and creative problem-solving</strong> under time constraints.</p>
+          </div>
+          
           <div class="achievement-highlight">
-            <h4>🎯 Key Learning</h4>
-            <p>Gained hands-on experience in game development lifecycle, from concept to playable prototype, while working under tight deadlines and collaborating with team members.</p>
+            <h4>🎮 Game Innovation Quote</h4>
+            <p>"Scream-to-Survive turned sound into action — blending creativity, code, and chaos into one unforgettable game jam experience."</p>
           </div>
           
           <div class="project-links">

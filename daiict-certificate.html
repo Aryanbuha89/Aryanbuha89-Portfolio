@@ -56,10 +56,14 @@
     }
     .certificate-image-section img {
       width: 100%;
-      max-width: 500px;
+      max-width: 600px;
+      height: auto;
+      object-fit: contain;
       border-radius: 15px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
       transition: transform 0.3s;
+      display: block;
+      margin: 0 auto;
     }
     .certificate-image-section img:hover {
       transform: scale(1.05);
@@ -164,6 +168,24 @@
       .project-links {
         flex-direction: column;
       }
+      .certificate-image-section img {
+        max-width: 100%;
+        margin: 0 auto 20px;
+      }
+      .certificate-container {
+        padding: 0 15px;
+      }
+    }
+    @media only screen and (max-width: 480px) {
+      .certificate-page {
+        padding: 60px 0 30px;
+      }
+      .certificate-header h1 {
+        font-size: 24px;
+      }
+      .certificate-header .org {
+        font-size: 16px;
+      }
     }
   </style>
 </head>
@@ -197,13 +219,21 @@
           </div>
           
           <div class="detail-section">
-            <h3>Project Description</h3>
-            <p>Built the <strong>"Coastal Threat Alert System"</strong>, leveraging AI, IoT, and satellite data to deliver real-time disaster alerts and actionable insights for protecting coastal communities and ecosystems.</p>
-            <p>This project represents a hands-on experience in innovative problem-solving, collaborative development, and climate-tech solutions. The system integrates multiple technologies to provide early warning systems for coastal disasters, helping communities prepare and respond effectively to environmental threats.</p>
+            <h3>Project: Coastal Threat Alert System</h3>
+            <p>Developed an <strong>AI + IoT + Satellite Data-driven platform</strong> that safeguards coastal regions through early disaster detection and ecosystem protection. The system delivers real-time alerts and insights on sea-level rise, cyclones, and illegal dumping, empowering city governments, NGOs, and coastal communities to act proactively.</p>
           </div>
           
           <div class="detail-section">
-            <h3>Technologies Used</h3>
+            <h3>Key Features</h3>
+            <p>• Role-based dashboards (Government, NGOs, Fisherfolk, Disaster Teams)<br>
+            • Real-time sea-level, cyclone, and pollution detection<br>
+            • Blue Carbon awareness & analytics<br>
+            • Protects mangroves, wetlands, and seagrass<br>
+            • Interactive data visualization dashboards</p>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Technical Stack</h3>
             <div class="skills-list">
               <span class="skill-tag">Frontend: React.js, CSS3</span>
               <span class="skill-tag">Backend: Node.js, Express.js</span>
@@ -212,6 +242,18 @@
               <span class="skill-tag">IoT: Raspberry Pi, Sensors</span>
               <span class="skill-tag">Deployment: Heroku, AWS</span>
             </div>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Highlights</h3>
+            <p>• Selected among <strong>250–300 offline teams</strong> from <strong>4000+ entries</strong><br>
+            • Enhanced resilience for coastal communities<br>
+            • Promotes sustainability & climate action</p>
+          </div>
+          
+          <div class="achievement-highlight">
+            <h4>🌊 Climate Action Quote</h4>
+            <p>"HackOut 2025 taught us that technology can bridge the gap between awareness and action for our planet's blue frontiers."</p>
           </div>
           
           <div class="project-links">

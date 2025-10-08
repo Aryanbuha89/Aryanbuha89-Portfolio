@@ -56,10 +56,14 @@
     }
     .certificate-image-section img {
       width: 100%;
-      max-width: 500px;
+      max-width: 600px;
+      height: auto;
+      object-fit: contain;
       border-radius: 15px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
       transition: transform 0.3s;
+      display: block;
+      margin: 0 auto;
     }
     .certificate-image-section img:hover {
       transform: scale(1.05);
@@ -164,6 +168,24 @@
       .project-links {
         flex-direction: column;
       }
+      .certificate-image-section img {
+        max-width: 100%;
+        margin: 0 auto 20px;
+      }
+      .certificate-container {
+        padding: 0 15px;
+      }
+    }
+    @media only screen and (max-width: 480px) {
+      .certificate-page {
+        padding: 60px 0 30px;
+      }
+      .certificate-header h1 {
+        font-size: 24px;
+      }
+      .certificate-header .org {
+        font-size: 16px;
+      }
     }
   </style>
 </head>
@@ -197,26 +219,32 @@
           </div>
           
           <div class="detail-section">
-            <h3>Project Description</h3>
-            <p>Participated in the <strong>National Space Technology Hackathon</strong> organized by ISRO, focusing on innovative solutions for space exploration and satellite technology applications.</p>
-            <p>Developed a comprehensive space technology solution addressing real-world challenges in satellite communication, space exploration, and Earth observation systems. This hackathon provided valuable experience in space technology development and collaboration with fellow space enthusiasts.</p>
+            <h3>Project: Space Technology Innovation for Earth Observation</h3>
+            <p>Participated in ISRO's National Space Hackathon focusing on <strong>satellite data processing, communication systems, and exploration technologies.</strong></p>
           </div>
           
           <div class="detail-section">
-            <h3>Technologies Used</h3>
+            <h3>Core Contributions</h3>
+            <p>• Developed data pipelines for satellite imagery analysis<br>
+            • Applied ML models for space observation and classification<br>
+            • Worked on prototype ideas for future satellite tech solutions</p>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Technologies</h3>
             <div class="skills-list">
-              <span class="skill-tag">Satellite Data Processing</span>
               <span class="skill-tag">Python Programming</span>
               <span class="skill-tag">Data Analysis</span>
               <span class="skill-tag">Machine Learning</span>
               <span class="skill-tag">Space Technology</span>
               <span class="skill-tag">Earth Observation</span>
+              <span class="skill-tag">Satellite Data Processing</span>
             </div>
           </div>
           
           <div class="achievement-highlight">
-            <h4>🏆 Key Achievement</h4>
-            <p>Successfully participated in India's premier space technology hackathon, gaining hands-on experience with satellite data processing and space technology applications.</p>
+            <h4>🚀 Innovation Quote</h4>
+            <p>"This recognition from ISRO reflects a step forward in India's journey toward indigenous space innovation."</p>
           </div>
           
           <div class="project-links">

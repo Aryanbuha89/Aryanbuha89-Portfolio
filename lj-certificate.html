@@ -56,10 +56,14 @@
     }
     .certificate-image-section img {
       width: 100%;
-      max-width: 500px;
+      max-width: 600px;
+      height: auto;
+      object-fit: contain;
       border-radius: 15px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
       transition: transform 0.3s;
+      display: block;
+      margin: 0 auto;
     }
     .certificate-image-section img:hover {
       transform: scale(1.05);
@@ -164,6 +168,24 @@
       .project-links {
         flex-direction: column;
       }
+      .certificate-image-section img {
+        max-width: 100%;
+        margin: 0 auto 20px;
+      }
+      .certificate-container {
+        padding: 0 15px;
+      }
+    }
+    @media only screen and (max-width: 480px) {
+      .certificate-page {
+        padding: 60px 0 30px;
+      }
+      .certificate-header h1 {
+        font-size: 24px;
+      }
+      .certificate-header .org {
+        font-size: 16px;
+      }
     }
   </style>
 </head>
@@ -197,21 +219,52 @@
           </div>
           
           <div class="detail-section">
-            <h3>Project Description</h3>
-            <p>Secured a spot in the <strong>Top 40 out of 240+ teams</strong> with our innovative project "Smart Cattle Health & Milk Prediction System". Built an AI-powered platform for predictive dairy farming, featuring real-time health monitoring, milk yield prediction, and disease detection.</p>
-            <p>The team delivered a practical AI solution, showcasing creativity, collaboration, and measurable impact in modern dairy farming. This project demonstrates the application of machine learning in agriculture and livestock management.</p>
+            <h3>Project: Smart Cattle Health & Milk Prediction System</h3>
+            <p>Secured a <strong>Top 40 Finalist</strong> position among <strong>240+ teams</strong> at LJ University's Hackovate 2025. Our team, <em>Hellboys</em>, built an <strong>AI-powered dairy management platform</strong> that transforms cattle health monitoring and milk production forecasting.</p>
+            <p>We developed a dual-model AI system integrating IoT and machine learning to address key dairy sector challenges — disease detection, yield prediction, and efficient farm operations.</p>
           </div>
           
           <div class="detail-section">
-            <h3>Technologies Used</h3>
+            <h3>Key Features</h3>
+            <p>• Real-time cattle health monitoring & scoring<br>
+            • AI models for milk yield prediction (Linear Regression) and disease detection (15+ classes)<br>
+            • Multilingual support (English, Hindi, Gujarati, Marathi)<br>
+            • Automated farm reports (PDF)<br>
+            • Mobile-first responsive dashboard<br>
+            • Batch processing for large herds</p>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Technical Stack</h3>
             <div class="skills-list">
-              <span class="skill-tag">Frontend: HTML, CSS, JavaScript</span>
-              <span class="skill-tag">Backend: Python, Flask</span>
-              <span class="skill-tag">Database: SQLite</span>
-              <span class="skill-tag">ML Libraries: Scikit-learn, Pandas</span>
-              <span class="skill-tag">IoT: Arduino, Sensors</span>
-              <span class="skill-tag">Deployment: Local Server</span>
+              <span class="skill-tag">Frontend: Next.js 14, React 18, TypeScript</span>
+              <span class="skill-tag">Styling: Tailwind CSS, Shadcn/UI</span>
+              <span class="skill-tag">Backend: FastAPI (Python), Uvicorn</span>
+              <span class="skill-tag">Database: Supabase PostgreSQL</span>
+              <span class="skill-tag">AI/ML: Scikit-learn, Pandas, NumPy</span>
+              <span class="skill-tag">Auth: Supabase Authentication</span>
+              <span class="skill-tag">Deployment: Cloud Microservices</span>
             </div>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Impact & Results</h3>
+            <p>• <strong>90% accuracy</strong> in milk yield forecasts<br>
+            • <strong>85% accuracy</strong> in disease detection<br>
+            • Enhanced cattle management & productivity</p>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Team Hellboys</h3>
+            <p>• <strong>Aryan Buha</strong> – Project Lead & Architect<br>
+            • <strong>Neel Prajapati</strong> – AI/ML Engineer<br>
+            • <strong>Patel Vrund</strong> – Frontend Developer<br>
+            • <strong>Sumit Patel</strong> – Backend Developer</p>
+          </div>
+          
+          <div class="achievement-highlight">
+            <h4>💡 Innovation Quote</h4>
+            <p>"Hackovate 2025 challenged us to innovate for India's dairy future — combining AI, IoT, and data to make agriculture smarter."</p>
           </div>
           
           <div class="project-links">

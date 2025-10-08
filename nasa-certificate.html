@@ -56,10 +56,14 @@
     }
     .certificate-image-section img {
       width: 100%;
-      max-width: 500px;
+      max-width: 600px;
+      height: auto;
+      object-fit: contain;
       border-radius: 15px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
       transition: transform 0.3s;
+      display: block;
+      margin: 0 auto;
     }
     .certificate-image-section img:hover {
       transform: scale(1.05);
@@ -164,6 +168,24 @@
       .project-links {
         flex-direction: column;
       }
+      .certificate-image-section img {
+        max-width: 100%;
+        margin: 0 auto 20px;
+      }
+      .certificate-container {
+        padding: 0 15px;
+      }
+    }
+    @media only screen and (max-width: 480px) {
+      .certificate-page {
+        padding: 60px 0 30px;
+      }
+      .certificate-header h1 {
+        font-size: 24px;
+      }
+      .certificate-header .org {
+        font-size: 16px;
+      }
     }
   </style>
 </head>
@@ -177,7 +199,7 @@
       
       <div class="certificate-header">
         <h1>🚀 NASA Space Apps Challenge</h1>
-        <p class="org">ISRO & Hack2skill</p>
+        <p class="org">NASA & Hack2skill (India Region)</p>
       </div>
       
       <div class="certificate-main">
@@ -190,28 +212,46 @@
           
           <div class="detail-section">
             <h3>Event Information</h3>
-            <p><strong>Event:</strong> Bharatiya Antariksh Hackathon 2025</p>
-            <p><strong>Organization:</strong> Indian Space Research Organisation (ISRO) & Hack2skill</p>
+            <p><strong>Event:</strong> NASA Space Apps Challenge 2025</p>
+            <p><strong>Organization:</strong> NASA & Hack2skill (India Region)</p>
             <p><strong>Date:</strong> March 2025</p>
-            <p><strong>Type:</strong> National Space Technology Competition</p>
+            <p><strong>Type:</strong> Global Space Technology Challenge</p>
           </div>
           
           <div class="detail-section">
-            <h3>Achievement Description</h3>
-            <p>Recognized for submitting an <strong>innovative idea</strong> to the Bharatiya Antariksh Hackathon 2025, organized by Hack2skill in collaboration with ISRO.</p>
-            <p>This achievement reflects dedication to innovation, exploration, and continuous learning in the field of space and technology, contributing to India's vision in space research. The hackathon focused on developing solutions for space applications, satellite technology, and space exploration challenges.</p>
+            <h3>Project: CityForge – Mumbai Pulse</h3>
+            <p>An <strong>AI-powered environmental analytics platform</strong> integrating <strong>NASA Earth Observation (EO) data</strong> with real-time urban datasets to enhance city sustainability and resilience.</p>
           </div>
           
           <div class="detail-section">
-            <h3>Technologies Used</h3>
+            <h3>What It Does</h3>
+            <p>Mumbai Pulse visualizes and analyzes:<br>
+            • 🌡️ Urban Heat Islands<br>
+            • 🌫️ Air Quality & Pollution Sources<br>
+            • 💧 Water Resource Trends<br>
+            • 🏙️ Urban Growth Patterns</p>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Technical Stack</h3>
             <div class="skills-list">
-              <span class="skill-tag">Frontend: Vue.js, Bootstrap</span>
-              <span class="skill-tag">Backend: Python, Django</span>
-              <span class="skill-tag">Database: PostgreSQL</span>
-              <span class="skill-tag">APIs: NASA Open Data, ISRO APIs</span>
-              <span class="skill-tag">Data Analysis: NumPy, Matplotlib</span>
-              <span class="skill-tag">Deployment: Digital Ocean</span>
+              <span class="skill-tag">Frontend: React / Next.js</span>
+              <span class="skill-tag">Backend: Flask API</span>
+              <span class="skill-tag">Mapping: Leaflet, Esri/ArcGIS</span>
+              <span class="skill-tag">APIs: Meteomatics, NASA MODIS</span>
+              <span class="skill-tag">Data: Landsat, SMAP</span>
+              <span class="skill-tag">Deployment: Cloud-native Infrastructure</span>
             </div>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Impact</h3>
+            <p>Empowers policymakers and citizens to take data-driven actions on urban environmental challenges — improving climate resilience and livability.</p>
+          </div>
+          
+          <div class="achievement-highlight">
+            <h4>🌍 Space Innovation Quote</h4>
+            <p>"A proud moment contributing to NASA's global Space Apps Challenge — where innovation meets sustainability."</p>
           </div>
           
           <div class="project-links">
