@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title>Personal portfolio</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://kit.fontawesome.com/2f88feeff1.js" crossorigin="anonymous"></script>
@@ -15,13 +14,15 @@
   <div class="container">
     <nav>
       <a href="#header" class="logo"><span class="logo-highlight">P</span>ortfolio</a>
-      <ul>
-        <li><a href="#header">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#portfolio">Achievement</a></li>
-        <li><a href="#contact">Contact</a></li>
+      <ul id="sidemenu">
+        <li><a href="#header" onclick="closemenu()">Home</a></li>
+        <li><a href="#about" onclick="closemenu()">About</a></li>
+        <li><a href="#services" onclick="closemenu()">Services</a></li>
+        <li><a href="#portfolio" onclick="closemenu()">Achievement</a></li>
+        <li><a href="#contact" onclick="closemenu()">Contact</a></li>
+        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
       </ul>
+      <i class="fa-solid fa-bars" onclick="openmenu()"></i>
     </nav>
   </div>
   <div class="container">
@@ -47,7 +48,7 @@
   <div class="container">
     <div class="row">
       <div class="about-col-1">
-        <img src="images/aryan single photo.png">
+        <img src="images/Aryan Resume Photo.png">
       </div>
       <div class="about-col-2">
         <h1 class="sub-title">About Me</h1>
@@ -93,27 +94,27 @@
         <i class="fa-solid fa-code"></i>
         <h2>Software Development</h2>
         <div class="service-quote">
-          <p>💡 Focused on building a strong foundation for advanced development and problem-solving.</p>
+          <p>Focused on building a strong foundation for advanced development and problem-solving.</p>
         </div>
-        <a href="javascript:void(0)">Learn more</a>
+        <a href="javascript:void(0)">View more</a>
       </div>
       
       <div onclick="openServiceModal('ai')">
         <i class="fa-solid fa-robot"></i>
         <h2>AI & Machine Learning</h2>
         <div class="service-quote">
-          <p>💡 Currently focusing on building deeper understanding of model pipelines — from raw data to trained AI systems.</p>
+          <p>Currently focusing on building deeper understanding of model pipelines — from raw data to trained AI systems.</p>
         </div>
-        <a href="javascript:void(0)">Learn more</a>
+        <a href="javascript:void(0)">View more</a>
       </div>
       
       <div onclick="openServiceModal('fullstack')">
         <i class="fa-solid fa-layer-group"></i>
         <h2>Full-Stack Development</h2>
         <div class="service-quote">
-          <p>💡 Passionate about creating seamless, full-stack web experiences that solve meaningful problems.</p>
+          <p>Passionate about creating seamless, full-stack web experiences that solve meaningful problems.</p>
         </div>
-        <a href="javascript:void(0)">Learn more</a>
+        <a href="javascript:void(0)">View more</a>
       </div>
       
     </div>
@@ -229,17 +230,17 @@
         <p><i class="fa-solid fa-envelope"></i> aryanbuha56@gmail.com</p>
         <p><i class="fa-solid fa-phone"></i> +91 9313198911</p>
         <div class="social-icons">
-          <a href="https://www.linkedin.com/in/aryan-buha-874a5434b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BtHWkAdOpQwmVX054SACMsQ%3D%3D"><i class="fa-brands fa-square-linkedin"></i></a>
+          <a href="https://www.linkedin.com/in/aryan-buha-874a5434b/"><i class="fa-brands fa-square-linkedin"></i></a>
           <a href=""><i class="fa-brands fa-square-x-twitter"></i></a>
           <a href="https://github.com/Aryanbuha89"><i class="fa-brands fa-square-github"></i></a>
         </div>
-        <a href="images/buhabhai.pdf" download class="btn btn2">Resume</a>
+        <a href="images/Aryan Resume.pdf" target="_blank" class="btn btn2">Resume</a>
       </div>
       <div class="contact-right">
         <form name="submit-to-google-sheet">
-          <input type="text" name="Name" placeholder="Your Name" required>
-          <input type="email" name="Email" placeholder="Your Email" required>
-          <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+          <input type="text" name="from_name" placeholder="Your Name" required>
+          <input type="email" name="from_email" placeholder="Your Email" required>
+          <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
           <button type="submit" class="btn btn2">Submit</button>
         </form>
         <span id="msg"></span>
@@ -341,61 +342,32 @@
 
 
   // Contact form submission
-  const form = document.forms['submit-to-google-sheet'];
-  const msg = document.getElementById('msg');
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzJJGFKEhJZNJgJGLJOJJGFKEhJZNJgJGLJOJJGFKEhJZNJgJGLJOJJGFKEhJZNJgJGLJOJ/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
 
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
+  form.addEventListener('submit', e => {
+    e.preventDefault()
     
     // Show loading message
-    msg.innerHTML = "Sending...";
-    msg.style.color = "#ababab";
+    msg.innerHTML = "📤 Sending message...";
+    msg.style.color = "#61ff61";
     msg.style.display = "block";
     
-    // Get form values
-    const formData = new FormData(form);
-    const name = formData.get('Name');
-    const email = formData.get('Email');
-    const message = formData.get('Message');
-    
-    // Validate form data
-    if (!name || !email || !message) {
-      msg.innerHTML = "❌ Please fill in all fields.";
-      msg.style.color = "#ff004f";
-      setTimeout(function() {
-        msg.innerHTML = "";
-      }, 3000);
-      return;
-    }
-    
-    // Send email using EmailJS
-    const templateParams = {
-      from_name: name,
-      from_email: email,
-      message: message,
-      to_email: 'aryanbuha56@gmail.com'
-    };
-
-    emailjs.send(
-      'service_txnmfop',  // Your EmailJS service ID
-      'template_izdk4kt', // Your EmailJS template ID
-      templateParams
-    )
+    // Use EmailJS to send email
+    emailjs.sendForm('service_txnmfop', 'template_izdk4kt', form)
     .then(function(response) {
       console.log('EmailJS SUCCESS!', response.status, response.text);
       // Show success message
-      msg.innerHTML = `✅ Thank you ${name}! Your message has been sent successfully. I'll get back to you at ${email} soon.`;
+      msg.innerHTML = "✅ Message sent successfully! I'll get back to you soon.";
       msg.style.color = "#61ff61";
+      form.reset()
       
-      // Reset form
-      form.reset();
-      
-      // Hide message after 6 seconds
+      // Hide message after 8 seconds
       setTimeout(function() {
         msg.innerHTML = "";
         msg.style.display = "none";
-      }, 6000);
-      
+      }, 8000);
     }, function(error) {
       console.log('EmailJS FAILED...', error);
       // Show error message
@@ -416,6 +388,15 @@
       publicKey: "dc2UOFd7SrfFFz4ok", // Your EmailJS public key
     });
   })();
+
+  // Mobile Menu Functions
+  function openmenu() {
+    document.getElementById("sidemenu").style.right = "0";
+  }
+  
+  function closemenu() {
+    document.getElementById("sidemenu").style.right = "-200px";
+  }
 
   // Achievement View More Functionality
   function toggleAchievements() {
